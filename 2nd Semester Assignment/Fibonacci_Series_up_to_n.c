@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main() {
+int main()
+{
     int n;
     scanf("%d", &n);
 
@@ -9,7 +10,8 @@ int main() {
 
     int c = a + b;
 
-    while (c <= n) {
+    while (c <= n)
+    {
         printf(", %d", c);
         a = b;
         b = c;

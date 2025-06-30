@@ -1,15 +1,19 @@
 #include <stdio.h>
+int main()
+{
+    char n;
+    scanf("%c", &n);
 
-int main() {
-    char ch;
-    scanf(" %c", &ch);  // Notice the space before %c to ignore any newline
-
-    if (ch >= 'a' && ch <= 'z') {
-        ch = ch - 32; // Convert to uppercase
-    } else if (ch >= 'A' && ch <= 'Z') {
-        ch = ch + 32; // Convert to lowercase
+    if (n >= 'a' && n <= 'z')
+    {
+        n = n - 32;
+        printf("%c", n);
     }
 
-    printf("%c", ch);
+    else
+    {
+        n = n + 32;
+        printf("%c", n);
+    }
     return 0;
 }
