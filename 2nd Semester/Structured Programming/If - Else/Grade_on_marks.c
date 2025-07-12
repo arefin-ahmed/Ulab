@@ -3,8 +3,8 @@ int main()
 {
     int number;
 
+    printf("Enter the number: \n");
     scanf("%d", &number);
-    printf("Enter the number: %d\n", number);
 
     if (number >= 90)
     {
