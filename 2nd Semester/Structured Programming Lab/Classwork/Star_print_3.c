@@ -1,16 +1,22 @@
 #include <stdio.h>
 int main()
 {
-    int i,j;
-    for (i=1;i<=5;i++)
+    int i, j, k;
+
+    for (i = 1; i <= 5; i++)
     {
-        for ( j = 1; j <=i; j++)
+        for (j = 1; j <= 5-i; j++)
         {
-            printf("%d",j );
+            printf(" ");
         }
-        
+
+        for (k = 1; k <= i; k++)
+        {
+            printf("%d", k);
+        }
+
         printf("\n");
     }
 
-    return 0 ;
+    return 0;
 }
