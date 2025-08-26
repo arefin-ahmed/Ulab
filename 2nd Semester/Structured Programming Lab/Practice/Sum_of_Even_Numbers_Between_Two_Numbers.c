@@ -2,7 +2,7 @@
 
 int main()
 {
-    int a, b, i, sum = 0;
+    int a, b, sum = 0;
     printf("Enter two integers: ");
     scanf("%d %d", &a, &b);
 
@@ -13,7 +13,7 @@ int main()
         b = temp;
     }
 
-    for (i = a; i <= b; i++)
+    for (int i = a; i <= b; i++)
     {
         if (i % 2 == 0)
         {
