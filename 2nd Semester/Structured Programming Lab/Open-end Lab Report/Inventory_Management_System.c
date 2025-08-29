@@ -120,7 +120,7 @@ void show_inventory()
         return;
     }
 
-    printf("\n--- Current Inventory ---\n");
+    printf("\n----- Current Inventory -----\n");
     for (int i = 0; i < product_count; i++)
     {
         printf("Product: %s, Units: %d, Price: $%.2f\n", inventory[i].name, inventory[i].units, inventory[i].price);
@@ -135,7 +135,7 @@ int main()
     int choice;
     while (1)
     {
-        printf("\n--- Main Menu ---\n");
+        printf("\n----- Main Menu -----\n");
         printf("1. Add new product\n");
         printf("2. Take product out\n");
         printf("3. Show total inventory\n");
