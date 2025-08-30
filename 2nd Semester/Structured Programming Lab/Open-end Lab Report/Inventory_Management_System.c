@@ -50,7 +50,7 @@ void add_product()
         if (product_count < MAX_PRODUCTS)
         {
             double price;
-            printf("Product does not exist.\nEnter price per unit: ");
+            printf("New Product.\nEnter price per unit: ");
             scanf("%lf", &price);
 
             strcpy(inventory[product_count].name, name);
@@ -123,11 +123,11 @@ void show_inventory()
     printf("\n----- Current Inventory -----\n");
     for (int i = 0; i < product_count; i++)
     {
-        printf("Product: %s, Units: %d, Price: $%.2f\n", inventory[i].name, inventory[i].units, inventory[i].price);
+        printf("Product: %s, Units: %d, Price: %.2f TK\n", inventory[i].name, inventory[i].units, inventory[i].price);
         total_value += inventory[i].units * inventory[i].price;
     }
     printf("-------------------------\n");
-    printf("Total Inventory Value: $%.2f\n", total_value);
+    printf("Total Inventory Value: %.2f TK\n", total_value);
 }
 
 int main()
