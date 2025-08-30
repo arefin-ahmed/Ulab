@@ -95,12 +95,12 @@ void take_product_out()
         if (inventory[found_index].units >= units_to_remove)
         {
             inventory[found_index].units -= units_to_remove;
-            printf("Removed %d units of '%s'. Remaining units: %d\n", units_to_remove, name, inventory[found_index].units);
+            printf("Removed %d units of %s.\nRemaining units: %d\n", units_to_remove, name, inventory[found_index].units);
         }
         else
         {
             // Not enough inventory, show a warning
-            printf("Warning: Not enough inventory for '%s'. Available units: %d\n", name, inventory[found_index].units);
+            printf("Warning: Not enough inventory for %s.\nAvailable units: %d\n", name, inventory[found_index].units);
         }
     }
     else
