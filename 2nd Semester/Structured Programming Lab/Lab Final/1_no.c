@@ -1,28 +1,19 @@
 #include <stdio.h>
-#include <string.h>
-
-int is_palindrome(char str[])
-{
-    int len = strlen(str);
-
-    for (int left = 0, right = len - 1; left < right; left++, right--)
-    {
-        if (str[left] != str[right])
-            return 0;
-    }
-    return 1;
-}
-
 int main()
 {
-    char s[100];
-    printf("Enter a string to check palindrome: ");
-    scanf("%s", s);
+    int n;
+    printf("Enter nth term : ");
+    scanf("%d", &n);
 
-    if (is_palindrome(s))
-        printf("Palindrome\n");
-    else
-        printf("Not palindrome\n");
+    int sum = 0, fact = 1;
+
+    for (int i = 1; i <= n; i++)
+    {
+        fact = fact * i;
+        sum = sum + fact;
+    }
+
+    printf("Sum of the series up to %d th terms is: %d\n", n, sum);
 
     return 0;
 }
