@@ -12,8 +12,8 @@ int SearchItem(int arr[], int n, int x)
 }
 int main()
 {
-    int n, x, i, arr[n];
-    int result = SearchItem(arr, n, x);
+    int n, x, i, arr[101];
+    int index = SearchItem(arr, n, x);
 
     printf("Enter the number of element in array: ");
     scanf("%d", &n);
@@ -28,13 +28,13 @@ int main()
     printf("Enter element to search for: ");
     scanf("%d", &x);
 
-    if (result == -1)
+    if (index == -1)
     {
         printf("Value is not found in the array");
     }
     else
     {
-        printf("Value is found at location: %d", result);
+        printf("Value is found at index: %d", index);
     }
     return 0;
 }
