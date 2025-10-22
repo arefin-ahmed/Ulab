@@ -41,7 +41,7 @@ int main()
     }
 
     return 0;
-}
+} 
 
 /* This is not a right way because This only checking if the item is at index 0,
     and treating any other valid index as "not found", which is incorrect.*/
