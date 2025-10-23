@@ -1,13 +1,13 @@
 #include <stdio.h>
 void selectionSort(int arr[], int n)
 {
-    int select, minIndex, minValue;
+    int j, minIndex, minValue;
 
-    for (select = 0; select < (n - 1); select++)
+    for (j = 0; j < (n - 1); j++)
     {
-        minIndex = select;
+        minIndex = j;
 
-        for (int i = select + 1; i < n; i++)
+        for (int i = j + 1; i < n; i++)
         {
             if (arr[i] < arr[minIndex])
             {
@@ -16,8 +16,8 @@ void selectionSort(int arr[], int n)
         }
         int tmp;
         tmp = arr[minIndex];
-        arr[minIndex] = arr[select];
-        arr[select] = tmp;
+        arr[minIndex] = arr[j];
+        arr[j] = tmp;
     }
 }
 
