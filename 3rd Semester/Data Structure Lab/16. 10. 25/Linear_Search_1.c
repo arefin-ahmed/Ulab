@@ -33,11 +33,11 @@ int main()
 
     if (index == -1)
     {
-        printf("Value is not found in the array\n");
+        printf("%d is not found in the array\n", x);
     }
     else
     {
-        printf("Value is found at index: %d\n", index);
+        printf("%d is found at index: %d\n", x, index);
     }
 
     return 0;
