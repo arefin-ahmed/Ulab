@@ -5,7 +5,6 @@ int front = -1;
 int rear = -1;
 int queue[SIZE];
 
-// Function to add element to queue
 void enqueue(int n)
 {
     if (rear == SIZE - 1)
@@ -15,7 +14,7 @@ void enqueue(int n)
     else
     {
         if (front == -1)
-        { // If queue was empty
+        {
             front = 0;
         }
         rear++;
@@ -24,7 +23,6 @@ void enqueue(int n)
     }
 }
 
-// Function to remove element from queue
 void dequeue()
 {
     if (front == -1 || front > rear)
@@ -37,13 +35,12 @@ void dequeue()
         printf("Dequeued value is: %d\n", value);
         front++;
         if (front > rear)
-        { // Queue becomes empty
+        {
             front = rear = -1;
         }
     }
 }
 
-// Function to display queue
 void printQueue()
 {
     if (front == -1)
