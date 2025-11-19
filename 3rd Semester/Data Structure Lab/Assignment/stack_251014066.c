@@ -67,7 +67,7 @@ int main()
 
     while (1)
     {
-        printf("\n===== MENU =====\n");
+        printf("\n Stack Menu \n");
         printf("1. Push\n");
         printf("2. Pop\n");
         printf("3. Top Element\n");
