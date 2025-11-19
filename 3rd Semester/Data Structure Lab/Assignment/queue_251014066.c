@@ -63,7 +63,7 @@ int main()
     int ch;
     do
     {
-        printf("\nQueue Operations Menu:\n");
+        printf("\nQueue Menu:\n");
         printf("1: Enqueue an element\n");
         printf("2: Dequeue an element\n");
         printf("3: Display all elements\n");
