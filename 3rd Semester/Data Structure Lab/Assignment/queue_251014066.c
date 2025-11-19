@@ -61,9 +61,9 @@ void printQueue()
 int main()
 {
     int ch;
-    do
+    while (1)
     {
-        printf("\nQueue Menu:\n");
+        printf("\nQueue Operations Menu:\n");
         printf("1: Enqueue an element\n");
         printf("2: Dequeue an element\n");
         printf("3: Display all elements\n");
@@ -89,11 +89,11 @@ int main()
             break;
         case 4:
             printf("Exiting program.\n");
-            break;
+            return 0;
         default:
             printf("Invalid choice! Try again.\n");
         }
-    } while (ch != 4);
+    }
 
     return 0;
 }
