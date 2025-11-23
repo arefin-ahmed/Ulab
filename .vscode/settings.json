@@ -1,6 +1,7 @@
 {
   "files.associations": {
     "Linear_Search.C": "cpp",
-    "Insertion_sort_251014066.C": "cpp"
+    "Insertion_sort_251014066.C": "cpp",
+    "stdio.h": "c"
   }
 }
