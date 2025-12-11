@@ -1,0 +1,18 @@
+BFS(source):
+    visited[] = all 0
+    parent[] = -1
+    queue = empty
+    mark source visited
+    enqueue(source)
+
+    while queue not empty:
+        curr = dequeue()
+        if curr == destination: break
+
+        for each neighbor next:
+            if route exists(curr, next) AND next not visited:
+                visited[next] = 1
+                parent[next] = curr
+                enqueue(next)
+
+    return visited[destination]

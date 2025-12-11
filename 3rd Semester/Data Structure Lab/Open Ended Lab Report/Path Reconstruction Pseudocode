@@ -1,0 +1,10 @@
+path = empty list
+curr = destination
+while curr != -1:
+    add curr to path
+    curr = parent[curr]
+
+reverse(path)
+
+for i from 0 to len(path)-2:
+    print route(path[i], path[i+1])
