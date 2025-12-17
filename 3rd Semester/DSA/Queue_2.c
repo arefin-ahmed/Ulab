@@ -33,7 +33,7 @@ void dequeue()
     }
 
     printf("%d dequeued from the queue.\n", queue[front++]);
-    if (front > rear) // Reset queue when empty
+    if (front > rear)                            // Reset queue when empty
         front = rear = -1;
 }
 
