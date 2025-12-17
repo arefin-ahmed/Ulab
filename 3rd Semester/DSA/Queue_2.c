@@ -1,15 +1,18 @@
-#include <stdio.h>
-#define MAX 50
+// here add array size, underflow and overflow
 
-int queue[MAX];
+#include <stdio.h>
+#include <stdlib.h>
+
+int *queue; // Pointer for dynamic queue
 int front = -1, rear = -1;
+int maxSize; // User-defined size
 
 // Enqueue function
 void enqueue(int x)
 {
-    if (rear == MAX - 1)
+    if (rear == maxSize - 1)
     {
-        printf("Queue Full! Cannot insert %d\n", x);
+        printf("Queue is full. Cannot insert %d\n", x);
         return;
     }
 
@@ -25,7 +28,7 @@ void dequeue()
 {
     if (front == -1 || front > rear)
     {
-        printf("Queue Empty! Cannot dequeue.\n");
+        printf("Queue is empty. Cannot dequeue.\n");
         return;
     }
 
@@ -53,6 +56,18 @@ int main()
 {
     int choice, value;
 
+    // Get user-defined size
+    printf("Enter the size of the queue: ");
+    scanf("%d", &maxSize);
+
+    // Allocate memory dynamically for the queue
+    queue = (int *)malloc(maxSize * sizeof(int));
+    if (!queue)
+    {
+        printf("Memory allocation failed!\n");
+        return 1;
+    }
+
     while (1)
     {
         printf("\n--- Queue Operations Menu ---\n");
@@ -75,6 +90,7 @@ int main()
             break;
         case 4:
             printf("Exiting program.\n");
+            free(queue); // Free dynamically allocated memory
             return 0;
         default:
             printf("Invalid choice! Try again.\n");
