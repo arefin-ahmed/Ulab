@@ -1,16 +1,13 @@
-// User define size Queue Using Array
-
 #include <stdio.h>
-#include <stdlib.h>
+#define MAX 10
 
-int *stack; // Pointer for dynamic stack
+int stack[MAX];
 int top = -1;
-int maxSize; // User-defined size
 
 // Push function
 void push(int x)
 {
-    if (top == maxSize - 1)
+    if (top == MAX - 1)
     {
         printf("Overflow! Cannot push %d\n", x);
         return;
@@ -24,7 +21,7 @@ void pop()
 {
     if (top == -1)
     {
-        printf("Stack is empty.\n");
+        printf("Underflow! Stack is empty.\n");
         return;
     }
     printf("%d popped from stack.\n", stack[top--]);
@@ -48,18 +45,6 @@ int main()
 {
     int choice, value;
 
-    // Get user-defined stack size
-    printf("Enter the size of the stack: ");
-    scanf("%d", &maxSize);
-
-    // Allocate memory dynamically
-    stack = (int *)malloc(maxSize * sizeof(int));
-    if (!stack)
-    {
-        printf("Memory allocation failed!\n");
-        return 1;
-    }
-
     while (1)
     {
         printf("\n--- Stack Operations Menu ---\n");
@@ -82,7 +67,6 @@ int main()
             break;
         case 4:
             printf("Exiting program.\n");
-            free(stack); // Free dynamically allocated memory
             return 0;
         default:
             printf("Invalid choice! Try again.\n");
@@ -96,18 +80,15 @@ int main()
 
 
 
-
-
 // #include <stdio.h>
-// #include <stdlib.h>
+// #define MAX 10
 
-// int *stack; 
+// int stack[MAX];
 // int top = -1;
-// int maxSize; 
 
 // void push(int x)
 // {
-//     if (top == maxSize - 1)
+//     if (top == MAX - 1)
 //     {
 //         printf("Overflow! Cannot push %d\n", x);
 //         return;
@@ -120,7 +101,7 @@ int main()
 // {
 //     if (top == -1)
 //     {
-//         printf("Stack is empty.\n");
+//         printf("Underflow! Stack is empty.\n");
 //         return;
 //     }
 //     printf("%d popped from stack.\n", stack[top--]);
@@ -142,16 +123,6 @@ int main()
 // int main()
 // {
 //     int choice, value;
-
-//     printf("Enter the size of the stack: ");
-//     scanf("%d", &maxSize);
-
-//     stack = (int *)malloc(maxSize * sizeof(int));
-//     if (!stack)
-//     {
-//         printf("Memory allocation failed!\n");
-//         return 1;
-//     }
 
 //     while (1)
 //     {
@@ -175,7 +146,6 @@ int main()
 //             break;
 //         case 4:
 //             printf("Exiting program.\n");
-//             free(stack); 
 //             return 0;
 //         default:
 //             printf("Invalid choice! Try again.\n");
