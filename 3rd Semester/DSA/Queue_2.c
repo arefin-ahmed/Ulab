@@ -1,4 +1,4 @@
-// here add array size, underflow and overflow
+// User define size Queue Using Array
 
 #include <stdio.h>
 #include <stdlib.h>
