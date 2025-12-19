@@ -12,7 +12,8 @@ void push(int x)
         printf("Overflow! Cannot push %d\n", x);
         return;
     }
-    stack[++top] = x;
+    ++top;
+    stack[top] = x;
     printf("%d pushed to stack.\n", x);
 }
 
@@ -37,7 +38,9 @@ void display()
     }
     printf("Stack elements (top to bottom): ");
     for (int i = top; i >= 0; i--)
+    {
         printf("%d ", stack[i]);
+    }
     printf("\n");
 }
 

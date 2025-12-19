@@ -15,8 +15,9 @@ void enqueue(int x)
 
     if (front == -1)
         front = 0;
-
-    queue[++rear] = x;
+        
+    ++rear;
+    queue[rear] = x;
     printf("%d enqueued to the queue.\n", x);
 }
 
